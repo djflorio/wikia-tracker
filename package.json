@@ -6,12 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:make": "knex --knexfile knexfile.mjs migrate:make",
+    "migrate:latest": "knex --knexfile knexfile.mjs migrate:latest",
+    "migrate:rollback": "knex --knexfile knexfile.mjs migrate:rollback",
+    "migrate:status": "knex --knexfile knexfile.mjs migrate:list"
   },
   "dependencies": {
+    "classnames": "2.5.1",
+    "knex": "3.3.0",
     "next": "16.4.2",
+    "pg": "8.23.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
